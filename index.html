@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <style>
+            body, h1 {font-family: arial,helvetica,sans;}
+
+            div.wrap {
+                width: 100%;
+            }
+            div.center {
+                width: 60%;
+                margin: 0 auto;
+            }
+            h1, p.center { text-align: center; }
+
+            .controls label, .controls2 label {
+                width: 40px;
+            }
+            .controls input, .controls2 input {
+                width: 240px;
+                border: 1px solid #777;
+            }
+            img.under {
+                display: block;
+                margin-left: auto;
+                margin-right: auto
+            }
+        </style>
+        <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+        <!-- <link href="colpick.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        <form name="rockthem" action="rockthem.php">
+            <div class="wrap">
+                <div class="center">
+                    <h1>Appearance</h1>
+                    <p class="center">Change how the lights look</p>
+                    <br>
+
+                    <p>
+                        <img class='under' src="underline.png">
+                    </p>
+
+                    <p style='text-align:center;'>
+                        <label>Initial Delay /ms</label>
+                        <input type='text' id='del' name='initdelay' value='100'>
+
+                        <select id='sel' name='pattern' style='height:26px;'>
+                            <option value="1"> Towers </option>
+                        </select> 
+                        <label>Initial Pattern</label>
+                    </p>
+
+                    <div style='float:left;display:inline-block;'>
+
+                        <div style="background-color: rgb(0, 0, 0);" class="preview"></div>
+
+                        <div class="colorpicker" style="">
+                            <canvas id="picker" var="2" width="300" height="300"></canvas>
+
+                            <div class="controls">
+                                <div><label>R</label> <input class='col1' id="rVal" type="text"></div>
+                                <div><label>G</label> <input class='col1' id="gVal" type="text"></div>
+                                <div><label>B</label> <input class='col1' id="bVal" type="text"></div>
+                                <div><label>RGB</label> <input class='col1' id="rgbVal" type="text"></div>
+                                <div><label>HEX</label> <input class='col1' id="hexVal" name='initcolour' type="text"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- <p>
+                            <div style='display:inline-block;width:10px;height:200px;background-color:#eee;'></div>
+                            <div style='display:inline-block;width:10px;height:200px;background-color:#eee;'></div>
+                    </p> -->
+
+                    <div style='float:right;display:inline-block;'>
+
+                        <div style="background-color: rgb(0, 0, 0);" class="preview2"></div>
+
+                        <div class="colorpicker2" style="">
+                            <canvas id="picker2" var="2" width="300" height="300"></canvas>
+
+                            <div class="controls2">
+                                <div><label>R</label> <input class='col2' id="rVal2" type="text"></div>
+                                <div><label>G</label> <input class='col2' id="gVal2" type="text"></div>
+                                <div><label>B</label> <input class='col2' id="bVal2" type="text"></div>
+                                <div><label>RGB</label> <input class='col2' id="rgbVal2" type="text"></div>
+                                <div><label>HEX</label> <input class='col2' id="hexVal2" name='changecolour' type="text"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Submit" name="submit" />
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="colpick.js"></script>
+    </body>
+</html>
